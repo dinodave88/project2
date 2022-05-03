@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website to generate 3D staad models">
+    <title>Dinto's page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'css/style_app1.css'%}">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title"><b><i>3D STAAD MODEL GENERATOR - IS CODE</i></b></div>
+      <form action='run' method='post'>
+
+        {% csrf_token %}
+        <div class="title1">DIMENSIONAL DATA :</div>
+        <div class="container1">
+          <div class="input-box">
+            <span class="details">Width (in meters)</span>
+            <input type="text" name="Width" placeholder="Enter the model width" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Height (in meters)</span>
+            <input type="text" name="Height" placeholder="Enter the model height" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">NS Roof Slope</span>
+            <input type="text" name="Slope" placeholder="Enter the NS roof slope (Eg: 0.1)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">FS Roof Slope</span>
+            <input type="text" name="FS_Slope" placeholder="Enter the FS roof slope (Eg: 0.1)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Ridge distance</span>
+            <input type="text" name="Ridge_distance" placeholder="Enter the distance to ridge (Eg: 10)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">SW spacing (in meters)</span>
+            <input type="text" name="SW_spacing" placeholder="Enter the spacing (Eg: 7.5 7.5 7.5....)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">EW spacing (in meters)</span>
+            <input type="text" name="EW_spacing" placeholder="Enter the spacing (Eg: 7.5 7.5 7.5....)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">NSR breaks (in meters)</span>
+            <input type="text" name="NSR_Breaks" placeholder="Enter the piece length (Eg: 3 3 3....)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">FSR breaks (in meters)</span>
+            <input type="text" name="FSR_Breaks" placeholder="Enter the piece length (Eg: 3 3 3....)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">ICO spacing (in meters)</span>
+            <input type="text" name="ICO_spacing" placeholder="Enter the spacing (Eg: 10 10....)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Braced bays</span>
+            <input type="text" name="Braced_bay_location" placeholder="Enter braced bay locations (Eg: 1 5 9....)" required>
+          </div>
+        </div>
+
+
+        <div class="title1">SUPPORT CONDITIONS :</div>
+        <div class="container2">
+          <div class="input-box">
+            <span class="details">NS Column support</span>
+            <select name="NSC_SUPPORT">
+              <option>PINNED</option>
+              <option>FIXED</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">FS Column support</span>
+            <select name="FSC_SUPPORT">
+              <option>PINNED</option>
+              <option>FIXED</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">WC Column support</span>
+            <select name="WC_SUPPORT">
+              <option>PINNED</option>
+              <option>FIXED</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">ICO Column support</span>
+            <select name="ICO_SUPPORT">
+              <option>PINNED</option>
+              <option>FIXED</option>
+            </select>
+          </div>
+        </div>
+
+
+
+
+        <div class="title1">LOADING DATA :</div>
+        <div class="container3">
+
+          <div class="input-box">
+            <span class="details">Dead Load (in kN/m2)</span>
+            <input type="text" name="DL" placeholder="Enter Dead load (Eg: -0.1)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Roof Live Load (in kN/m2)</span>
+            <input type="text" name="LL" placeholder="Enter Roof Live load (Eg: -0.75)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Collateral Load (in kN/m2)</span>
+            <input type="text" name="CL" placeholder="Enter Collateral load (Eg: -0.15)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Wind Pressure (in kN/m2)</span>
+            <input type="text" name="WL" placeholder="Enter Wind pressure (Eg: 1.03)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Internal Pressure Co-eff</span>
+            <input type="text" name="Cpi" placeholder="Enter Internal Pressure Co-eff (Eg: 0.2)" required>
+          </div>
+        </div>
+
+
+        <div class="title1">SEISMIC DATA :</div>
+        <div class="container3a">
+
+          <div class="input-box">
+            <span class="details">Zone Factor</span>
+            <input type="text" name="Zone_factor" placeholder="Enter Zone factor (Eg: 0.1)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Response Reduction Factor</span>
+            <input type="text" name="Response_reduction_factor" placeholder="Enter Response reduction factor (Eg: 4)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Importance Factor</span>
+            <input type="text" name="Importance_factor" placeholder="Enter Importance factor (Eg: 1.25)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Rock/Soil Site Factor</span>
+            <input type="text" name="Rock_and_soil_site_factor" placeholder="Enter Rock/soil site factor (Eg: 1)" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Damping Ratio</span>
+            <input type="text" name="Damping_ratio" placeholder="Damping ratio (Eg: 0.05)" required>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="title1">ADDITIONAL PARAMETERS :</div>
+        <div class="container4">
+
+          <div class="input-box">
+            <span class="details">Primary Loads</span>
+            <select name="LOADS_REQUIRED">
+              <option>EL-DL-RLL-WL</option>
+              <option>EL-DL-RLL-MLL-WL</option>
+              <option>EL-DL-RLL-WL-CRL(1)</option>
+              <option>EL-DL-RLL-MLL-WL-CRL(1)</option>
+              <option>EL-DL-RLL-CL-WL</option>
+              <option>EL-DL-RLL-MLL-CL-WL</option>
+              <option>EL-DL-RLL-CL-WL-CRL(1)</option>
+              <option>EL-DL-RLL-MLL-CL-WL-CRL(1)</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Seismic Code</span>
+            <select name="SEISMIC_CODE">
+              <option>IS 1893-2002/2005</option>
+              <option>IS 1893-2002/2005(WITH PART-4)</option>
+              <option>IS 1893(PART-1)-2016</option>
+              <option>IS 1893(PART-4)-2015</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="button">
+          <input type="submit" value="GENERATE STAAD FILE">
+        </div>
+
+      </form>
+
+    </div>
+
+  </body>
+
+</html>

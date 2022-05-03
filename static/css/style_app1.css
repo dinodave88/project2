@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 250vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  color: green;
+}
+
+.container .title1 {
+  font-size: 20px;
+  font-weight: 300;
+  position: relative;
+  margin: 25px 0 12px 0;
+  border-bottom: 2px solid green;
+
+}
+
+.container form .container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.container form .container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.container form .container3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.container form .container3a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.container form .container4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+
+form .container1 .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .container2 .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .container3 .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .container3a .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .container4 .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.container1 .input-box .details {
+  display: block;
+  font-weight: 500px;
+  margin-bottom: 5px;
+}
+
+.container2 .input-box .details {
+  display: block;
+  font-weight: 500px;
+  margin-bottom: 5px;
+}
+
+.container3 .input-box .details {
+  display: block;
+  font-weight: 500px;
+  margin-bottom: 5px;
+}
+
+.container3a .input-box .details {
+  display: block;
+  font-weight: 500px;
+  margin-bottom: 5px;
+}
+
+.container4 .input-box .details {
+  display: block;
+  font-weight: 500px;
+  margin-bottom: 5px;
+}
+
+.container1 .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.container3 .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.container3a .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.container1 .input-box input:focus,
+.container1 .input-box input:valid {
+  border-color: #9b59b6
+}
+
+.container3 .input-box input:focus,
+.container3 .input-box input:valid {
+  border-color: #9b59b6
+}
+
+.container3a .input-box input:focus,
+.container3a .input-box input:valid {
+  border-color: #9b59b6
+}
+
+.container2 .input-box select {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.container4 .input-box select {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+
+  form .container1 .input-box {
+  margin-bottom: 15px;
+  width: 100%;
+  }
+
+  form .container2 .input-box {
+  margin-bottom: 15px;
+  width: 100%;
+  }
+
+  form .container3 .input-box {
+  margin-bottom: 15px;
+  width: 100%;
+  }
+
+  form .container3a .input-box {
+  margin-bottom: 15px;
+  width: 100%;
+  }
+
+  form .container4 .input-box {
+  margin-bottom: 15px;
+  width: 100%;
+  }
+
+  .container form .container1 {
+    max-height: 260px;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .container form .container2 {
+    max-height: 170px;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .container form .container3 {
+    max-height: 170px;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .container form .container3a {
+    max-height: 170px;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .container form .container4 {
+    max-height: 170px;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .container1::-webkit-scrollbar{
+    width: 0;
+  }
+
+  .container2::-webkit-scrollbar{
+    width: 0;
+  }
+
+  .container3::-webkit-scrollbar{
+    width: 0;
+  }
+
+  .container3a::-webkit-scrollbar{
+    width: 0;
+  }
+
+  .container4::-webkit-scrollbar{
+    width: 0;
+  }
+}
